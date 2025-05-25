@@ -6,7 +6,7 @@
         <title> Community Event Portal </title>
         <link rel="stylesheet" href="styles.css" />       
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
             #welcomeBanner {
                 background-color: #cce5ff;
@@ -43,6 +43,10 @@
         </style>
     </head>
     <body>
+        <div id="eventsContainer"></div>
+<div id="loadingSpinner" style="display:none;">Loading events...</div>
+<div id="apiEventsContainer"></div>
+
         <nav>
             <ul>
                 <li><a href="#home">Home</a> </li>
@@ -200,9 +204,60 @@ function findLocation() {
     </p>
   </div>
 </section>
+<h2>Community Events</h2>
+
+<label for="categoryFilter">Filter by Category:</label>
+<select id="categoryFilter">
+  <option value="All">All</option>
+  <option value="Environment">Environment</option>
+  <option value="Health">Health</option>
+  <option value="Music">Music</option>
+  <option value="Cooking">Cooking</option>
+</select>
+
+<br /><br />
+
+<label for="searchInput">Search by Name:</label>
+<input type="text" id="searchInput" placeholder="Type event name..." />
+
+<div id="eventsContainer"></div>
+ <h2>Register for Event</h2>
+  <form id="registrationForm">
+    <label>
+      Name:
+      <input type="text" name="name" />
+      <span class="error" id="nameError"></span>
+    </label><br/><br/>
+    <label>
+      Email:
+      <input type="email" name="email" />
+      <span class="error" id="emailError"></span>
+    </label><br/><br/>
+    <label>
+      Select Event:
+      <select name="event">
+        <option value="">--Select--</option>
+        <option value="Community Cleanup Drive">Community Cleanup Drive</option>
+        <option value="Music Night">Music Night</option>
+        <option value="Blood Donation Camp">Blood Donation Camp</option>
+      </select>
+      <span class="error" id="eventError"></span>
+    </label><br/><br/>
+    <button type="submit" id="registerBtn">Register</button>
+  </form>
+
+  <div id="message"></div>
+
+  <h3>Events</h3>
+  <div id="eventCards">
+    <div class="eventCard" id="card1">Community Cleanup Drive - June 15, 2025</div>
+    <div class="eventCard" id="card2">Music Night - June 20, 2025</div>
+    <div class="eventCard" id="card3">Blood Donation Camp - May 30, 2025</div>
+  </div>
 
         <footer>
             <p>&copy; 2025 Portal Inc. All rights reserved.</p>
         </footer>
+        <script src="main.js"></script>
     </body>
 </html>
