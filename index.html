@@ -4,15 +4,18 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title> Community Event Portal </title>
+        <link rel="stylesheet" href="styles.css" />       
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
         <style>
             #welcomeBanner {
-                background-color: rgb(158, 199, 229);
+                background-color: #cce5ff;
                 color: rgb(9, 104, 206);
                 padding: 12px;
                 font-weight: bold;
             }
             .highlight {
-                background-color: rgb(158, 199, 229);
+                background-color: #cce5ff;
                 color: rgb(9, 104, 206);
                 font-weight: bold;;
             }
@@ -48,11 +51,14 @@
                 <li><a href="help.html" target="_blank">Help</a> </li>
             </ul>
         </nav>
-        <main>
+        <main class="eventCard">
             <section id="home">Home Section</section>
             <section id="events">Events Section</section>
             <section id="contact">Contact Section</section>
         </main>
+        <div id="mainHeader">
+        <h1> Community Event Portal </h1>
+        </div>
         <div id="welcomeBanner">
             <p class="highlight"> Welcome to the Community Event Portal! </p>
             <span style="color: rgb(9, 104, 206);font-family: 'Times New Roman', Times, serif;">
@@ -73,7 +79,7 @@
             </tr>
         </table>
         <form class="form" onsubmit="document.getElementById('confirm').value='Registered Successfully!'; return false;">
-            <h2>Registration form</h2>
+            <h2 style="color: red;">Registration form</h2>
             <input type="text" name="name" placeholder="name" required autofocus><br><br>
             <input type="email" name="email" placeholder="email" required><br><br>
             <input type="date" name="date" required><br><br>
@@ -136,7 +142,10 @@ window.onbeforeunload = function () {
   <option value="sports">Sports</option>
 </select>
 
-<button onclick="clearPrefs()">Clear Preferences</button>
+<button onclick="clearPrefs()" class="cta-button">Clear Preferences</button>
+<p id="demo1" style="visibility: hidden;">This is invisible but takes up space.</p>
+<p id="demo2" style="display: none;">This is completely removed from layout flow.</p>
+
 
 <script>
 window.onload = function() {
@@ -177,7 +186,20 @@ function findLocation() {
 }
 </script>
 <script>console.log("Debug message");</script>
-
+<section id="newsArticle">
+  <h2>Community Bulletin</h2>
+  <div class="news-columns">
+    <p>
+        <strong>Latest News:</strong> The annual community festival will be held on March 15th. Join us for a day of fun, food, and festivities!
+        The local park renovation is underway and expected to be completed by the end of the month.
+      Community members have volunteered to assist in cleaning up and planting new greenery.
+      Upcoming events include the annual Spring Fair, blood donation drives, and a weekend art exhibition.
+      Residents are encouraged to participate and support these initiatives to strengthen community bonds.
+      A new library wing has been inaugurated with state-of-the-art facilities and more digital access.
+      Volunteers are also planning to conduct free workshops on digital literacy for seniors.
+    </p>
+  </div>
+</section>
 
         <footer>
             <p>&copy; 2025 Portal Inc. All rights reserved.</p>

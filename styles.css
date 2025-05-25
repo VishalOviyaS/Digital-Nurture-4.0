@@ -1,0 +1,303 @@
+/*Reset and Box Sizing*/
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*/
+
+/*  Heading Styles*/
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+}
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+  color: #0b4f84;
+  margin-bottom: 10px;
+}
+/*  Navigation Bar Styles*/
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+} 
+nav ul li a{
+    color: #333;
+}
+
+/*  Section Styling*/
+section {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+/* Footer Styles*/
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #0b4f84;
+  color: white;
+}
+
+/*  Style for main CTA button*/
+.cta-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+/*ID Selector - Main Header*/
+#mainHeader {
+  background-color: #cce5ff;
+  color: #003366;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Class Selector - Events card */
+.eventCard {
+  border: 2px solid #0b4f84;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+/* Grouping Selector - h3, p*/
+h3, p {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+/*  Body Styling with Background*/
+body {
+  background-color: #f0f0f0; 
+  background-image: url('bg.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #1a1a1a; 
+  font-family: Arial, sans-serif;
+}
+
+/*  Section Header Gradient Styling */
+section h2 {
+  background: linear-gradient(to right, #0066cc, #33ccff); 
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* RGBA Example for Transparent Background*/
+.eventCard {
+  background-color: rgba(255, 255, 255, 0.85); 
+  color: #333;
+  border: 2px solid #0b4f84;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Apply global font */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  padding: 2vw;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Header Styles */
+h1, h2 {
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Subheadings and event titles */
+h3 {
+  font-style: italic;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+/* Descriptive paragraphs */
+p {
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: justify;
+  letter-spacing: 0.5px;
+}
+
+/* Call-to-action buttons  */
+.cta-button {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+/* Link styles */
+a:link {
+  color: #0b4f84;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #555;
+}
+
+a:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #2980b9;
+}
+
+/* Navigation menu (assumes nav ul and li exist) */
+nav ul {
+  list-style-type: none; /* Remove bullets */
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  background-color: #f0f8ff;
+}
+
+nav li {
+  padding: 10px 15px;
+  margin: 5px 0;
+}
+
+/* General list styling (for other UL/OL in content) */
+ul, ol {
+  list-style-type: circle;
+  list-style-position: inside;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+ul li, ol li {
+  margin-bottom: 8px;
+}
+/* Base table style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Table headers and cells */
+ td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Zebra striping */
+tr:nth-child(even) {
+  background-color: #e6f0fa;
+}
+
+/* Table caption styling  */
+caption {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #0b4f84;
+}
+/* Highlight selected form fields */
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #007BFF;
+  outline-offset: 2px;
+}
+/* Style for news article section */
+.news-columns {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  text-align: justify;
+  margin: 20px;
+}
+.eventCard {
+  flex: 1 1 300px;
+  box-sizing: border-box;
+}
+.form {
+  width: 300px; 
+  max-width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Stack nav links vertically */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  /* Reduce font sizes */
+  body {
+    font-size: 4vw;
+  }
+
+  h1, h2, h3 {
+    font-size: 5vw;
+  }
+
+  /* Make images responsive */
+  img, .gallery {
+    width: 80%;
+    height: auto;
+  }
+
+  /* Flexible layout using percentages */
+  .form {
+    width: 90%;
+    padding: 5%;
+  }
+
+  /* Stack sections or use column-based layout */
+  section {
+    padding: 4vh 4vw;
+  }
+
+  /* Responsive multi-column: revert to one column */
+  .news-columns {
+    column-count: 1;
+  }
+}
+
